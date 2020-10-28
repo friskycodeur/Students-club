@@ -38,7 +38,7 @@ source envs/bin/activate
 ```
 #### Install requirements
 ```bash
-cd simple-django-project/
+cd S_club/
 pip install -r requirements.txt
 ```
 
