@@ -1,0 +1,25 @@
+{% extends "blog/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="content-section jumbotron mt-3">
+        <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class='border-bottom mb-4 text-center'>Login</legend>
+            {{ form|crispy  }}
+            
+        </fieldset>
+        <div class="text-center">
+            <button class='btn btn-outline-info justify-center' type='submit'>Login</button>
+        </div>
+        <div class="text-center">
+            <small class="muted"> <a class='ml-2' href="{% url 'password_reset' %}">Forgot Password? </a> </small>
+        </div>
+        </form>
+        <div class="border-top pt-3 text-center">
+            <small class="muted"> Don't have an account ? <a class='ml-2' href="{% url 'register' %}">Sign up Now</a> </small>
+        </div>
+    </div>
+
+{% endblock content%}
