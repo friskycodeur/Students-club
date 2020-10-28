@@ -1,4 +1,16 @@
 # S_Club : An Article website for students
+
+## About the Project 
+
+This is a fullstack project in which as user is able to post and read articles posted by other students. The backend is done using django and frontend is done using HTML,CSS and Bootstrap.
+
+#### Highlights :
+- Users can make their profiles with profile picture and username of their choice.
+- Users can also reset their email or/and password in case they forget it.
+- Users can view articles sorted from latest article to oldest.
+- Users can also see all the artciles that a specific user has posted/written.
+- Users get the option to CRUD their articles.
+
 ## Installation
 
 ### Prerequisites
@@ -36,13 +48,10 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 
-# For search feature we need to index certain tables to the haystack. For that run below command.
-python manage.py rebuild_index
-
 # Run the server
-python manage.py runserver 0:8001
+python manage.py runserver
 
-# your server is up on port 8001
+# your server is up
 ```
-Try opening [http://localhost:8001](http://localhost:8001) in the browser.
+Try opening [http://localhost:8000](http://localhost:8000) in the browser.
 Now you are good to go.
