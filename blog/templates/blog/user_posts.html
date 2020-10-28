@@ -1,28 +1,32 @@
-{% extends "blog/base.html"%}
+{% extends "blog/base.html "%}
 {% block content %}
-
-<h1 class="mb-3 text-center">Posts by {{view.kwargs.username}} ({{page_obj.paginator.count}})</h1>
+<div class="text-center m-3">
+<h1 class="mb-3 text-center"> {{view.kwargs.username}}'s Posts ({{page_obj.paginator.count}})</h1>
+</div>
 {% for post in posts %}
 
-<div class="card mb-3 article" style="max-width: 50wv">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="{{ post.pic.url }}" class="card-img" alt="..." />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-            <h5 class=" card-title text-center">
-              <strong> <a href="{% url 'post-detail' post.id %}"> {{post.title}} </a> </strong>
-            </h5>
+
+<div class="text-center">
+  <div class="card mb-3 ml-0 article col-12" >
+      <div class="row no-gutters">
+        <div class="col-md-4 card-header border-0">
+          <img src="{{ post.pic.url }}" class="card-img" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+              <h5 class=" card-title">
+                <strong> <a href="{% url 'post-detail' post.id %}" class="post_title"> {{post.title}} </a> </strong>
+              </h5>
+            </div>
+            <p class="card-text text-left ml-3">
+              {{post.content}}
+            </p>
+            <p class="card-text">
+              <small class="text-muted card-footer"
+                >Posted by <a href="{% url 'user-posts' post.author.username %}"> {{post.author}} </a> on {{post.date_posted|date:"F d, Y"}}  </small
+              >
+            </p>
           </div>
-          <p class="card-text">
-            {{post.content}}
-          </p>
-          <p class="card-text">
-            <small class="text-muted"
-              >Posted by <a href="{% url 'user-posts' post.author.username %}"> {{post.author}} </a> on {{post.date_posted|date:"F d, Y"}}  </small
-            >
-          </p>
         </div>
       </div>
     </div>

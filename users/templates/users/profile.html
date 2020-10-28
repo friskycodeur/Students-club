@@ -9,6 +9,7 @@
       <div class="media-body">
         <h2 class="account-heading text-center">Welcome , {{ user.username }} !</h2>
         <p class="text-secondary text-center">{{ user.email }}</p>
+        <p class="text-secondary text-center"><a href="{% url 'user-posts' user.username %}" class="btn btn-light"> <i class="fa fa-laptop"></i> Your Articles</a></p>
       </div>
     </div>
     <!-- FORM HERE -->
