@@ -1,5 +1,7 @@
 # S_Club : An Article website for students
 
+### To see the web project live in action : [Click Here](https://friskycodeur.pythonanywhere.com/) 
+
 ## About the Project 
 
 This is a fullstack project in which as user is able to post and read articles posted by other students. The backend is done using django and frontend is done using HTML,CSS and Bootstrap.
