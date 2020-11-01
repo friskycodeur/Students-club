@@ -69,6 +69,11 @@ body {
   border-radius: 5px;
 }
 
+.card-img{
+  height:250px;
+  width:350px;
+}
+
 .post-title{
   text-decoration: none;
   color: #649f22;
