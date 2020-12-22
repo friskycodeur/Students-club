@@ -26,10 +26,10 @@ SECRET_KEY = 'wg#n5!6^y*9u8gj=-r3w+%y)v$1yg#%toyu!2u+%#7c%n-!(zz'
 #SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = False 
 #  (os.environ.get('DEBUG_KEY')=='True')
 
-ALLOWED_HOSTS = ['s-club.herokuapp.com']
+ALLOWED_HOSTS = ['s-club.herokuapp.com','127.0.0.1']
 
 
 # Application definition
